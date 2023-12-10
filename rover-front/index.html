@@ -6,8 +6,17 @@
   <title>Rover</title>
 </head>
 
-<body>
+<body style="margin: 0;overflow: hidden;">
   <script type="module" src="./src/app.ts"></script>
+  <script>
+    function resizeHander() {
+      let cvs = document.getElementById("gameCanvas")
+      cvs.width = window.innerWidth;
+      cvs.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeHander)
+    window.onload = resizeHander;
+  </script>
 </body>
 
 </html>
